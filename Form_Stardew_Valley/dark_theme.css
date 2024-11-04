@@ -1,0 +1,249 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    /* To control positioning of pseudo-element */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('slike/background_dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(5px) brightness(0.7);
+    z-index: -1;
+}
+
+.aplikacije {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    text-align: center;
+}
+
+a {
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    outline: 2px solid white;
+    margin: 0 5px;
+    transition-property:
+        outline-offset, outline-color, background-color;
+    transition-duration: .25s;
+    text-decoration: none;
+}
+
+a:hover {
+    outline-offset: 4px;
+}
+
+a:hover i {
+    animation: shake .25s;
+}
+
+.pinterest:hover {
+    background-color: #E60023;
+    outline-color: #aa061f;
+}
+
+.twitter:hover {
+    background-color: #1da1f2;
+    outline-color: #1da1f2;
+}
+
+.instagram:hover {
+    background-image:
+        radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d62497 60%, #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+.youtube:hover {
+    background-color: #FF0000;
+    outline-color: #ee0202;
+}
+
+.wrap {
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+
+}
+
+form {
+    height: 470px;
+    width: 410px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #373e6f;
+    border: 10px solid #11102f;
+}
+
+.pfp {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #536266;
+}
+
+.file-upload {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.profilna {
+    display: none;
+    /* Hide the default file input */
+}
+
+.file-upload label {
+    color: #929292;
+    font-size: 16px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+label.sprememba:hover {
+    color: rgb(191, 191, 191);
+}
+
+span {
+    color: #ff0000;
+}
+
+input {
+    border: none;
+    background-color: #222152;
+    block-size: 27px;
+    width: 300px;
+    border-radius: 3px;
+    color: #9e9e9e;
+}
+
+label {
+    color: #929292;
+    font-size: 16px;
+    padding: 10px 0 3px 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+input::placeholder {
+    color: #1a193e;
+    /* Change this to your desired color */
+    opacity: 1;
+    /* Ensures the opacity stays at 100% */
+}
+
+input:focus {
+    outline: none;
+    background-color: #6a49b856;
+    box-shadow: gray;
+    box-shadow: 4px 4px 9px #000000;
+}
+
+.gender-selection {
+    display: inline-flex;
+    width: 80px;
+    justify-content: center;
+}
+
+.gender-selection input[type="radio"] {
+    display: none;
+    /* Hide the radio button itself */
+}
+
+.gender-selection img {
+    width: 50px;
+    /* Control the size of the images */
+    height: auto;
+    /* Maintain aspect ratio */
+    border: 3px solid transparent;
+    /* Default border */
+    border-radius: 5px;
+    /* Optional: make the images round */
+    transition: border-color 0.3s ease;
+}
+
+.gender-selection img:hover {
+    border-color: #2d286e;
+    /* Highlight border on hover */
+}
+
+.gender-selection input[type="radio"]:checked+label .gender-image {
+    border-color: #141339;
+    /* Change border color when selected */
+}
+
+button {
+    display: inline-block;
+    /* Ensure the button takes full width */
+    background-color: #212859;
+    /* Change background color */
+    color: #929292;
+    /* Change text color */
+    margin-top: 12px;
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 15px;
+    /* Increase font size for the button */
+    width: 75%;
+    /* Set width to 100% of the parent container */
+    height: 25px;
+    /* Include padding and border in the element's total width */
+}
+
+button:hover {
+    background-color: #131639;
+    /* Darker shade on hover */
+}
+
+/* Styling the button */
+.theme-toggle {
+    position: fixed;
+    width: 123px;
+    height: 56px;
+    bottom: 3%;
+    right: 1.5%;
+    background-color: #18143e;
+    border-radius: 50px;
+    color: #786eff;           /* White text */
+    border: 5px solid #100d29;
+    border-radius: 5px;     /* Rounded corners */
+    font-size: 14px;        /* Smaller font size */
+}
+
+/* Optional: Add a hover effect */
+.theme-toggle:hover {
+    background-color: #100d29; /* Darker shade on hover */
+    border: 5px solid #100d29;
+    color: #786eff;
+}

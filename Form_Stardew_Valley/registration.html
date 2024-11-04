@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link id="themeStylesheet" rel="stylesheet" href="light_theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a8721eab17.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="slike/icon.jpg" type="image/jpg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="light-theme">
+    <div>
+        <div class="aplikacije">
+            <a href="https://www.pinterest.com/" class="pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://x.com/i/flow/login" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+    <div class="wrap">
+        <form>
+            <div class="file-upload">
+                <img src="slike/default_pfp.png" class="pfp default-pfp" id="profilePicture" />
+                <input type="file" id="file" class="profilna">
+                <label for="file" class="sprememba">= Click here to add profile picture =</label>
+            </div>            
+
+            <label for="username">Username: <span id="username-required"></span></label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password: <span id="password-required"></span></label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="name">Name: <span id="name-required"></span></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname">
+
+            <!-- Gender Selection -->
+            <label for="gender">Gender:</label>
+            <div class="gender-selection">
+                <!-- Male option -->
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">
+                    <img src="slike/male.svg" alt="Male" class="gender-image">
+                </label>
+
+                <!-- Female option -->
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">
+                    <img src="slike/female.svg" alt="Female" class="gender-image">
+                </label>
+            </div>
+            <!-- Submit Button -->
+            <button id="alertButton" type="button">Confirm</button>
+        </form>
+    </div>
+
+    <div>
+        <button id="themeToggle" class="theme-toggle" type="button" onclick="toggleTheme()">Dark Mode</button>
+    </div>
+
+    <script src="pfp.js"></script>
+    <script src="button_registration.js"></script>
+    <script src="themeToggle_registration.js"></script>
+</body>
+
+</html>
