@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link id="themeStylesheet" rel="stylesheet" href="login_light.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a8721eab17.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="slike/icon.jpg" type="image/jpg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="light-theme">
+    <div>
+        <div class="aplikacije">
+            <a href="https://www.pinterest.com/" class="pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://x.com/i/flow/login" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+    <div class="wrap">
+        <form>
+
+            <label for="username">Username: <span id="username-required"></span></label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password: <span id="password-required"></span></label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Submit Button -->
+            <button id="alertButton" type="button">Confirm</button>
+        </form>
+    </div>
+
+    <div>
+        <button id="themeToggle" class="theme-toggle" type="button" onclick="toggleTheme()">Dark Mode</button>
+    </div>
+
+    <script src="button_login.js"></script>
+    <script src="themeToggle_login.js"></script>
+</body>
+
+</html>
